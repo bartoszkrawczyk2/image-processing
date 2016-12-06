@@ -1,0 +1,196 @@
+@import 'normalize.css';
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.box {
+    float: left;
+    margin: 0 10px;
+}
+
+.app {
+    padding: 20px;
+    padding-bottom: 50px;
+
+    &:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+a {
+    color: #000;
+}
+
+.result {
+    margin-left: 30px;
+    font-size: 12px;
+    height: 20px;
+}
+
+.kernel-app * {
+    transition: all 400ms;
+}
+
+.kernel:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.k {
+    width: 90px;
+    border: 1px solid;
+    border-right: 0;
+    border-bottom: 0;
+    float: left;
+    margin: 30px;
+    position: relative;
+    margin-top: 45px;
+
+    span {
+        display: block;
+        float: left;
+        width: 33.33%;
+        height: 30px;
+        border-right: 1px solid;
+        text-align: center;
+        padding-top: 8px;
+        font-size: 13px;
+    }
+
+    div {
+        border-bottom: 1px solid;
+        position: relative;
+
+        &:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    }
+
+    .k-square {
+        position: absolute;
+        border: 3px solid limegreen;
+        width: 91px;
+        height: 94px;
+        z-index: 1;
+        left: -1px;
+        top: -1px;
+    }
+
+    .k-val {
+        position: absolute;
+        width: 25%;
+        height: 30px;
+        background: #ff8888;
+        border: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .k-val-r {
+        border: 2px solid #ff8888;
+        width: 31px;
+        height: 32px;
+        position: absolute;
+        z-index: 10;
+        top: 30px;
+        left: 29px;
+    }
+} 
+
+.kpx {
+    width: 120px;
+    margin-top: 30px;
+
+    span {
+        width: 25%;
+    }
+}
+
+.op {
+    &:after {
+        content: '=';
+        position: absolute;
+        right: -38px;
+        font-size: 34px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &:before {
+        content: '×';
+        position: absolute;
+        left: -38px;
+        font-size: 34px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .k-val {
+        width: 33.33%;
+    }
+} 
+
+.px {
+    position: absolute;
+    font-size: 13px;
+    display: none;
+}
+
+#p1 {
+    left: 547px;
+    top: 184px;
+}
+
+#p2 {
+    left: 547px;
+    top: 184px;
+}
+
+#p3 {
+    left: 543px;
+    top: 184px;
+}
+
+#p4 {
+    left: 534px;
+    top: 184px;
+}
+
+.kernel-controls {
+    margin-left: 30px;
+    margin-top: 30px;
+    display: flex;
+    max-width: 500px;
+    align-items: center;
+
+    input {
+        flex: 1;
+    }
+
+    button {
+        background: transparent;
+        border: 0;
+        margin-right: 30px;
+        width: 30px;
+        text-align: center;
+
+        &:after {
+            content: '\25b6';
+        }
+
+        &.play:after {
+            content: '||';
+            font-weight: bold;
+        }
+    }
+}
